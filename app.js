@@ -13,11 +13,11 @@ dotenv.config({
 const app = express()
 
 const PORT = process.env.PORT;
-const corsOrigins = ['http://localhost:3000', 'http://localhost:5173']; // extract and split CORS origins from the environment variable
+// const corsOrigins = ['http://localhost:3000', 'http://localhost:5173']; // extract and split CORS origins from the environment variable
 
 // middleware configuration
 const corsOptions = {
-    origin: corsOrigins, // frontend URI (ReactJS)
+    origin: process.env.CORS_ORIGIN, // frontend URI (ReactJS)
     credentials: true
 }
 
